@@ -1,8 +1,6 @@
 
 ## Object Detection and Segmentation with Pytorch
 
-## Diabetic-Retinopathy-Classification WebbAppBot using Deep Learning: CNN and NLP 
-
 ## Objective:
 
 The objective of this project is to make information and diagnosis of Diabetic Retinopathy accessible to diabetes patients and also to assist ophthalmologist in diagnosing the disease. The project will reduce the window, between the testing and start of treatment, significantly
