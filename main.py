@@ -5,6 +5,11 @@ from utils.metric import Metric
 
 
 def train_model(epochs=5):
+    """
+
+    :param epochs:
+    :return:
+    """
 
     train_data_dir = '/data/content/training_set/training_set'
     test_data_dir = '/data/content/test_set/test_set'

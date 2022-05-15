@@ -8,10 +8,10 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 class data(Dataset):
     def __init__(self, folder):
-        '''
+        """
 
         :param folder:
-        '''
+        """
         class1 = glob(folder+'/class1/*.jpg')
         class2 = glob(folder+'/class2/*.jpg')
         self.fpaths = class1 + class2
@@ -23,14 +23,18 @@ class data(Dataset):
                         for fpath in self.fpaths]
 
     def __len__(self):
+        """
+
+        :return:
+        """
         return len(self.fpaths)
 
     def __getitem__(self, item):
-        '''
+        """
 
         :param item:
         :return:
-        '''
+        """
         f = self.fpaths[item]
         target = self.targets[item]
         im = (cv2.imread(f)[:,:,::-1])
@@ -40,13 +44,13 @@ class data(Dataset):
 
 
 def get_data(train_data_dir, test_data_dir, batch_size=32):
-    '''
+    """
 
     :param train_data_dir:
     :param test_data_dir:
     :param batch_size:
     :return:
-    '''
+    """
     train = data(train_data_dir)
     trn_dl = DataLoader(train, batch_size=batch_size, shuffle=True, drop_last=True)
     val = data(test_data_dir)

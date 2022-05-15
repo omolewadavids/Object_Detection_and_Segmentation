@@ -7,6 +7,14 @@ device = 'cuda' if torch.cuda.is_available() else 'cpu'
 class Model(nn.Module):
 
   def conv_layer(self, ni, no, kernel_size, stride):
+    """
+
+    :param ni:
+    :param no:
+    :param kernel_size:
+    :param stride:
+    :return:
+    """
     return nn.Sequential(
       nn.Conv2d(ni, no, kernel_size, stride),
       nn.ReLU(),
@@ -15,6 +23,10 @@ class Model(nn.Module):
     )
 
   def get_model(self):
+    """
+
+    :return:
+    """
     model = nn.Sequential(
       self.conv_layer(3, 64, 3),
       self.conv_layer(64, 512, 3),
@@ -32,6 +44,15 @@ class Model(nn.Module):
 
 
 def train_batch(x, y, model, opt, loss_fn):
+  """
+
+  :param x:
+  :param y:
+  :param model:
+  :param opt:
+  :param loss_fn:
+  :return:
+  """
   model.train()
   prediction = model(x)
   batch_loss = loss_fn(prediction, y)
