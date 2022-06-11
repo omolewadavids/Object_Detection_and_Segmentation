@@ -1,4 +1,4 @@
-
+import torch
 from matplotlib.image import imread
 import matplotlib.pyplot as plt
 import numpy as np
@@ -23,9 +23,9 @@ def plot_image(image, image_title, plot_type = 'image', singular_values = None):
 
 
 def decompose(image):
-    image = np.mean(image, -1) # convert RGB to grayscale
-    U, S, VT = np.linalg.svd(image, full_matrices=False)
-    S = np.diag(S)
+    image = torch.mean(image, -1) # convert RGB to grayscale
+    U, S, VT = torch.linalg.svd(image, full_matrices=False)
+    S = torch.diag(S)
 
     return U, S, VT
 
@@ -41,7 +41,9 @@ def plot_decompose(image, r, plot_type=None):
 
 
 if __name__ == '__main__':
-    A = imread('../test/michelle.jpeg')
+    A = torch.from_numpy(imread('../test/michelle.jpeg'))
+    A = torch.Tensor.float(A)
+
     for r in [20, 50, 100, 200]:
         plot_decompose(A, r, 'image')
 
