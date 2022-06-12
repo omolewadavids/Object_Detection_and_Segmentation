@@ -8,11 +8,14 @@ pipeline {
             }
         }
         stage('Build') {
-            git branch: 'dev', credentialsId: 'ObjDetctionSegmentation', url: 'https://github.com/omolewadavids/Object_Detection_and_Segmentation.git'
-
+            steps{
+                git branch: 'dev', credentialsId: 'ObjDetctionSegmentation', url: 'https://github.com/omolewadavids/Object_Detection_and_Segmentation.git'
+            }
         }
         stage('Test') {
-            echo 'Done building'
+            steps{
+                echo 'Done building'
+            }
         }
     }
 }
