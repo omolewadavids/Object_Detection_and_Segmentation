@@ -42,6 +42,7 @@ def plot_decompose(image, r, plot_type=None):
 
 if __name__ == '__main__':
     A = imread('../test/michelle.jpeg')
+    print(A.shape)
     for r in [20, 50, 100, 200]:
         plot_decompose(A, r, 'image')
 

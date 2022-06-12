@@ -7,6 +7,14 @@ plt.rcParams['figure.figsize'] = [16, 8]
 
 
 def plot_image(image, image_title, plot_type = 'image', singular_values = None):
+    """
+
+    :param image:
+    :param image_title:
+    :param plot_type:
+    :param singular_values:
+    :return:
+    """
     if plot_type == 'image':
         img = plt.imshow(256 - image)
         img.set_cmap('gray')
