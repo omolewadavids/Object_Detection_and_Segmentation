@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Test') {
             steps{
-                echo 'Done building'
+                echo 'Done building and checking for the filex'
             }
         }
     }
