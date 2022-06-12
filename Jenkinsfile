@@ -15,6 +15,7 @@ pipeline {
         stage('Test') {
             steps{
                 echo 'Done building and checking for the filex'
+                echo 'Omolewa'
             }
         }
     }
