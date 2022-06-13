@@ -1,3 +1,5 @@
+''' Written by Omolewa '''
+
 import torch
 from matplotlib.image import imread
 import matplotlib.pyplot as plt
