@@ -8,6 +8,7 @@ plt.rcParams['figure.figsize'] = [16, 8]
 
 def plot_image(image, image_title, plot_type = 'image', singular_values = None):
     if plot_type == 'image':
+        print(image.shape)
         img = plt.imshow(256 - image)
         img.set_cmap('gray')
         plt.axis('off')
@@ -33,6 +34,7 @@ def decompose(image):
 def plot_decompose(image, r, plot_type=None):
     U, S, VT = decompose(image)
     ImageApprox = U[:,:r] @ S[0:r,:r] @ VT[:r,:]
+    print(ImageApprox.shape)
     img_title = f'r = {r}'
     if plot_type:
         plot_image(ImageApprox, r)
@@ -43,7 +45,8 @@ def plot_decompose(image, r, plot_type=None):
 if __name__ == '__main__':
     A = imread('../test/michelle.jpeg')
     print(A.shape)
-    for r in [20, 50, 100, 200]:
-        plot_decompose(A, r, 'image')
+    plot_decompose(A, 100, 'image')
+    # for r in [20, 50, 100, 200]:
+    #     plot_decompose(A, r, 'image')
 
 
