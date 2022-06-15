@@ -9,7 +9,17 @@ plt.rcParams['figure.figsize'] = [16, 8]
 A = imread('../test/michelle.jpeg')
 
 
-def plot_image(image, image_title, plot_type = 'image', singular_values = None, singular_val_cumm = None):
+def plot_image(image, image_title, plot_type='image', singular_values=None, singular_val_cumm = None):
+    """
+
+    :param image:
+    :param image_title:
+    :param plot_type:
+    :param singular_values:
+    :param singular_val_cumm:
+    :return:
+    """
+
     if plot_type == 'image':
         img = plt.imshow(256 - image)
         img.set_cmap('gray')
