@@ -17,7 +17,7 @@ def plot_image(image, image_title, plot_type='image', singular_values=None, sing
     :param plot_type:
     :param singular_values:
     :param singular_val_cumm:
-    :return:
+    :return:jpeg -> low rank image
     """
 
     if plot_type == 'image':
