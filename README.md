@@ -3,7 +3,7 @@ Object Detection and Segmentation with Pytorch
 ## Table of Contents
 1. [Project Description](#description)
 2. [Porject Credentials](#credentials)
-    * [MongoDB Credentials](#mongo)
+    * [MongoDB Credentials](#####mongo)
     * [Resize Images](#crop-and-resize-all-images)
     * [Checking Blurness of Images](#Checking-Blur)
     * [Data Augmentation](#Data-Augmentation)
