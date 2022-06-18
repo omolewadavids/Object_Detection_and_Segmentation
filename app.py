@@ -4,6 +4,7 @@ from flask_debugtoolbar import DebugToolbarExtension
 
 app = Flask(__name__)
 
+
 class test:
     def __init__(self, fname, lname, mname):
         self.fname = fname
