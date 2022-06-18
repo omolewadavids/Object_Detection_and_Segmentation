@@ -1,7 +1,7 @@
 import numpy as np
-from utils.dataset import *
-from utils.model import *
-from utils.metric import Metric
+from common.dataset import *
+from common.model import *
+from common.metric import Metric
 
 
 def train_model(epochs=5):
