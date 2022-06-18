@@ -1,10 +1,14 @@
-
+import datetime
 from flask import Flask, render_template
-from flask_debugtoolbar import DebugToolbarExtension
+from pymongo import MongoClient
+from common.utils import InitDBConnection as conn
+
 
 app = Flask(__name__)
 
-
+client = MongoClient(conn.mongodb_connection())
+print(client.ODS.entries.find({}))
+app.db = client.ODS
 class test:
     def __init__(self, fname, lname, mname):
         self.fname = fname
