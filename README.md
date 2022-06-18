@@ -1,5 +1,17 @@
 # Object_Detection_and_Segmentation
 Object Detection and Segmentation with Pytorch
+## Table of Contents
+1. [Obtaining the Datasets](#data)
+2. [Loading and Preprocessing](#preprocessing)
+    * [Download Images to Google Colab](#download-all-images-to-colab)
+    * [Resize Images](#crop-and-resize-all-images)
+    * [Checking Blurness of Images](#Checking-Blur)
+    * [Data Augmentation](#Data-Augmentation)
+3. [CNN Architecture](#neural-network-architecture)
+4. [Results](#results)
+5. [References](#references)
+6. [Authors](#Authors)
+
 
 ## Project Description
 
@@ -13,3 +25,21 @@ mongodb_password=user1password '''
 ##### MongoDB Credentials:
 - Mongo DB Credentials: It contains the username and password of the MongoDB user
 - MongoDB Connection string
+
+## Installation:
+* [Python (Minimum 3)](https://www.continuum.io/blog/developer-blog/python-3-support-anaconda)
+* [pandas](http://pandas.pydata.org/)
+* [Seaborn](https://seaborn.pydata.org/)
+
+## Authors
+
+* **[Omolewa Adaramola](https://github.com/omolewadavids)**
+* [Blue Lambda Techgnologies LLC](https://www.bluelambdatechnologies.com/)
+
+## License
+
+* <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/"> Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>
+
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
+	<img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" />
+</a>
