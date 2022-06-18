@@ -8,9 +8,10 @@ Object Detection and Segmentation with Pytorch
     * [Checking Blurness of Images](#Checking-Blur)
     * [Data Augmentation](#Data-Augmentation)
 3. [CNN Architecture](#neural-network-architecture)
-4. [Results](#results)
-5. [References](#references)
-6. [Authors](#Authors)
+4. [Installation:](#installation)
+5. [Results](#results)
+6. [References](#references)
+7. [Authors](#Authors)
 
 
 ## Project Description
@@ -26,7 +27,7 @@ mongodb_password=user1password '''
 - Mongo DB Credentials: It contains the username and password of the MongoDB user
 - MongoDB Connection string
 
-## Installation:
+## Installation: <a id="installation"></a>
 * [Python (Minimum 3)](https://www.continuum.io/blog/developer-blog/python-3-support-anaconda)
 * [pandas](http://pandas.pydata.org/)
 * [Seaborn](https://seaborn.pydata.org/)
