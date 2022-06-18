@@ -2,11 +2,24 @@
 from matplotlib.image import imread
 import matplotlib.pyplot as plt
 import numpy as np
+import os
 
 plt.rcParams['figure.figsize'] = [16, 8]
 
+A = imread('../test/michelle.jpeg')
 
-def plot_image(image, image_title, plot_type = 'image', singular_values = None):
+
+def plot_image(image, image_title, plot_type='image', singular_values=None, singular_val_cumm = None):
+    """
+
+    :param image:
+    :param image_title:
+    :param plot_type:
+    :param singular_values:
+    :param singular_val_cumm:
+    :return:jpeg -> low rank image
+    """
+
     if plot_type == 'image':
         img = plt.imshow(256 - image)
         img.set_cmap('gray')
@@ -35,20 +48,12 @@ def decompose(image):
     return U, S, VT
 
 
-def plot_decompose(image, r, plot_type=None):
+def plot_decompose(image, r):
     U, S, VT = decompose(image)
     ImageApprox = U[:,:r] @ S[0:r,:r] @ VT[:r,:]
     img_title = f'r = {r}'
-    if plot_type:
-        plot_image(ImageApprox, r)
-    else:
-        plot_image(image=ImageApprox, plot_type='singular_values', image_title=img_title, singular_values=S)
+    plot_image(ImageApprox, img_title)
 
 
 if __name__ == '__main__':
-    A = imread('../test/michelle.jpeg')
-    print(A.shape)
-    for r in [20, 50, 100, 200]:
-        plot_decompose(A, r, 'image')
-
-
+    plot_decompose(A, 200)
