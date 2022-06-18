@@ -23,8 +23,13 @@ def plot_image(image, image_title, plot_type = 'image', singular_values = None):
 
 
 def decompose(image):
+    """
+
+    :param image: jpeg -> image to decompose
+    :return: tuple -> tuple of matrices
+    """
     image = np.mean(image, -1) # convert RGB to grayscale
-    U, S, VT = np.linalg.svd(image, full_matrices=False)
+    U, S, VT = np.linalg.svd(image, full_matrices=False) # performing singular value decomposition
     S = np.diag(S)
 
     return U, S, VT
