@@ -1,33 +1,33 @@
 # Object_Detection_and_Segmentation
 Object Detection and Segmentation with Pytorch
 ## Table of Contents
-1. [Obtaining the Datasets](#data)
-2. [Loading and Preprocessing](#preprocessing)
-    * [Download Images to Google Colab](#download-all-images-to-colab)
+1. [Project Description](#description)
+2. [Porject Credentials](#credentials)
+    * [MongoDB Credentials](#mongo)
     * [Resize Images](#crop-and-resize-all-images)
     * [Checking Blurness of Images](#Checking-Blur)
     * [Data Augmentation](#Data-Augmentation)
-3. [CNN Architecture](#neural-network-architecture)
-4. [Installation:](#installation)
-5. [Results](#results)
-6. [References](#references)
-7. [Authors](#Authors)
+4. [CNN Architecture](#neural-network-architecture)
+5. [Installation](#installation)
+6. [Results](#results)
+7. [References](#references)
+8. [Authors](#Authors)
 
 
-## Project Description
+## Project Description <a id="description"></a>
 
 
-## Project Credentials
+## Project Credentials <a id="credentials"></a>
 The project is using **Decouple library** to manage all the necessary credentials. 
 - A .env file must be created at the root of the project
 - all the credentials written to the file. example ''' mongodb_username=user1
 mongodb_password=user1password '''
 
-##### MongoDB Credentials:
+##### MongoDB Credentials <a id="monga"></a>
 - Mongo DB Credentials: It contains the username and password of the MongoDB user
 - MongoDB Connection string
 
-## Installation: <a id="installation"></a>
+## Installation <a id="installation"></a>
 * [Python (Minimum 3)](https://www.continuum.io/blog/developer-blog/python-3-support-anaconda)
 * [pandas](http://pandas.pydata.org/)
 * [Seaborn](https://seaborn.pydata.org/)
