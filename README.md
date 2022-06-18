@@ -7,6 +7,6 @@ The project is using **Decouple library** to manage all the necessary credential
 - all the credentials written to the file. example ''' mongodb_username=user1
 mongodb_password=user1password '''
 
-##### __MongoDB Credentials__
+##### MongoDB Credentials:
 - Mongo DB Credentials: It contains the username and password of the Mongodb user
 - MongoDB Connection string
