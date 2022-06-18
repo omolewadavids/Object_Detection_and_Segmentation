@@ -2,8 +2,8 @@
 Object Detection and Segmentation with Pytorch
 ## Table of Contents
 1. [Project Description](#description)
-2. [Porject Credentials](#credentials)
-    * [MongoDB Credentials](#####mongo)
+2. [Project Credentials](#credentials)
+    * [MongoDB Credentials](#mongo)
     * [Resize Images](#crop-and-resize-all-images)
     * [Checking Blurness of Images](#Checking-Blur)
     * [Data Augmentation](#Data-Augmentation)
@@ -23,7 +23,7 @@ The project is using **Decouple library** to manage all the necessary credential
 - all the credentials written to the file. example ''' mongodb_username=user1
 mongodb_password=user1password '''
 
-##### MongoDB Credentials <a id="monga"></a>
+##### MongoDB Credentials <a id="mongo"></a>
 - Mongo DB Credentials: It contains the username and password of the MongoDB user
 - MongoDB Connection string
 
