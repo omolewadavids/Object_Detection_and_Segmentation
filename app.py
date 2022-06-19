@@ -3,13 +3,16 @@ from flask import Flask, render_template
 from pymongo import MongoClient
 from common.utils import InitDBConnection as conn
 
-
+# TODO: how to use create_app function to avoid creating multiple mongodb connection
 app = Flask(__name__)
 
 client = MongoClient(conn.mongodb_connection())
-print(client.ODS.entries.find({}))
+print([e for e in client.ODS.entries.find({})])
+client.ODS.entries.insert_one({'fname': 'Bukola', 'mname': 'Omolewa', 'lname': 'Adaramola'})
 app.db = client.ODS
-class test:
+
+
+class Test:
     def __init__(self, fname, lname, mname):
         self.fname = fname
         self.lname = lname
@@ -28,7 +31,7 @@ def page():
 
 @app.route("/pythonobj")
 def obj():
-    testing = test("Omolewa", "Adaramola", "Bukola")
+    testing = Test("Omolewa", "Adaramola", "Bukola")
     return render_template("thirdpage.html", testing=testing)
 
 
