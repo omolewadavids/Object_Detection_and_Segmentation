@@ -6,7 +6,7 @@ from glob import glob
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
 
-class data(Dataset):
+class Data(Dataset):
     def __init__(self, folder):
         """
 

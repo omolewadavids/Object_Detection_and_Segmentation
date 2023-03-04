@@ -118,3 +118,4 @@ def lambda_handler(event, context):
             return {"statusCode": 200, "body": json.dumps("Email sent successfully!")}
 
     return {"statusCode": 500, "body": json.dumps("Email delivery failed!")}
+
